@@ -4,10 +4,11 @@ Assignment Week1
 Code starts here:
 
 ### Samtool
-```bash
+`bash
 samtools --version
 
-# Command to create nested structure 
+### Command to create nested structure 
+`bash
 mkdir -p project/docs project/src/utils project/tests
 
 # Command create different files in different dictionary
