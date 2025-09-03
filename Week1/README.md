@@ -12,14 +12,14 @@ samtools --version
 mkdir -p project/docs project/src/utils project/tests
 ```
 
-# Command create different files in different dictionary
+### Command create different files in different dictionary
 ```bash
 echo "print('Hello World')" > project/src/main.py
 echo "# Utility functions" > project/src/utils/helpers.py
 echo "# Documentation" > project/docs/readme.md
 echo "# Test cases" > project/tests/test_main.py
 ```
-# Access these files use relative/absolute Path
+### Access these files use relative/absolute Path
 ```bash
 cat project/src/main.py
 cat ~/Bioinfo852/BioInfo-852/project/src/main.py
