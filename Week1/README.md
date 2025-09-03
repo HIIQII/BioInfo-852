@@ -3,8 +3,9 @@ Assignment Week1
 
 Code starts here:
 
-# samtool:
-samtools --version 
+### Samtool
+```bash
+samtools --version
 
 # Command to create nested structure 
 mkdir -p project/docs project/src/utils project/tests
