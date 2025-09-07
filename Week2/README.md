@@ -38,6 +38,7 @@ grep -v "^#" Poecilia_mexicana.P_mexicana-1.0.115.gff3 | wc -l
 ```
 
 #### How many genes are listed for this organism?
+```bash
 cat pm.gff3 | cut -f 3 | sort | uniq |head
 cat pm.gff3 | cut -f 3 | sort | uniq -c |head
 cat pm.gff3 | cut -f 3 | sort | uniq -c | sort -rn |head
