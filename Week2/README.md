@@ -19,7 +19,9 @@ cat Poecilia_mexicana.P_mexicana-1.0.115.gff3 | head
 ```bash
 grep "##sequence-region" Poecilia_mexicana.P_mexicana-1.0.115.gff3 | wc -l
 ```
-#### The output is 18105 which is unexpect for this organism
+```bash
+The output is 18105 which is unexpect for this organism
+```
 
 #### Remove Save lines not starting with '#' to pm.gff3 
 ```bash 
