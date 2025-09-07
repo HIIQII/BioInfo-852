@@ -47,16 +47,16 @@ cat pm.gff3 | cut -f 3 | sort | uniq -c | sort -rn |head
 ```
 
 #### Output
- 353979 exon
- 345083 CDS
+  353979 exon
+  345083 CDS
   34933 mRNA
   26104 five_prime_UTR
   24074 gene
   18400 three_prime_UTR
   18105 region
   17522 biological_region
-    359 ncRNA_gene
-    190 snoRNA
+  359 ncRNA_gene
+  190 snoRNA
 
 #### Is there a feature type that you may have not heard about before? What is the feature and how is it defined?
 ```bash
