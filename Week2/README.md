@@ -28,5 +28,28 @@ cat Poecilia_mexicana.P_mexicana-1.0.115.gff3 | grep -v '#' | head -1
 cat Poecilia_mexicana.P_mexicana-1.0.115.gff3 | grep -v '#' > pm.gff3
 bash
 
-#### 
+#### How many features does the file contain
+```bash
+grep -v "^#" Poecilia_mexicana.P_mexicana-1.0.115.gff3 | wc -l
+bash
 
+#### How many genes are listed for this organism?
+cat pm.gff3 | cut -f 3 | sort | uniq |head
+cat pm.gff3 | cut -f 3 | sort | uniq -c |head
+cat pm.gff3 | cut -f 3 | sort | uniq -c | sort -rn |head
+bash
+
+#### Output
+ 353979 exon
+ 345083 CDS
+  34933 mRNA
+  26104 five_prime_UTR
+  24074 gene
+  18400 three_prime_UTR
+  18105 region
+  17522 biological_region
+    359 ncRNA_gene
+    190 snoRNA
+
+#### Is there a feature type that you may have not heard about before? What is the feature and how is it defined?
+#### The feature name that I havent heard is snoRNA, 
