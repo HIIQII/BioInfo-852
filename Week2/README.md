@@ -17,9 +17,9 @@ cat Poecilia_mexicana.P_mexicana-1.0.115.gff3 | head
 
 #### How many sequence regions (chromosomes) does the file contain? Does that match with the expectation for this organism?
 ```bash
-cat Poecilia_mexicana.P_mexicana-1.0.115.gff3 | grep KQ | wc -l
+grep "##sequence-region" Poecilia_mexicana.P_mexicana-1.0.115.gff3 | wc -l
 ```
-#### The output is 813379 which is unexpect for this organism
+#### The output is 18105 which is unexpect for this organism
 
 #### Remove the useless data from the file 
 ```bash 
@@ -31,6 +31,9 @@ cat Poecilia_mexicana.P_mexicana-1.0.115.gff3 | grep -v '#' > pm.gff3
 #### How many features does the file contain
 ```bash
 grep -v "^#" Poecilia_mexicana.P_mexicana-1.0.115.gff3 | wc -l
+```
+```bash
+839033
 ```
 
 #### How many genes are listed for this organism?
