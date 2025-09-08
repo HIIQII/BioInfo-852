@@ -73,9 +73,5 @@ cat pm.gff3 | cut -f 3 | sort | uniq -c | sort -rn |head -10
 ```bash
 The feature name that I haven't heard is snoRNA, small nucleolar RNAs (snoRNAs) are a class of small RNA molecules that primarily guide chemical modifications of other RNAs, mainly ribosomal RNAs, transfer RNAs, and small nuclear RNAs.
 ```
-#### What are the top-ten most annotated feature types (column 3) across the genome?
-```bash
-cat pm.gff3 | cut -f 3 | sort-uniq-count-rank | head
-```
 
 #### Through the analysis of the data it seems like this species is well-anotated organisms, but the number of chromosomes indeed surprised me. 
