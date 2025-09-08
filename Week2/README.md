@@ -17,7 +17,7 @@ cat Poecilia_mexicana.P_mexicana-1.0.115.gff3 | head
 
 #### How many sequence regions (chromosomes) does the file contain? Does that match with the expectation for this organism?
 ```bash
-grep "##sequence-region" Poecilia_mexicana.P_mexicana-1.0.115.gff3 | wc -l
+cat Poecilia_mexicana.P_mexicana-1.0.115.gff3 | grep "##sequence-region" | wc -l
 ```
 ```bash
 The output is 18105 which is unexpect for this organism
@@ -33,7 +33,7 @@ ls -lh
 
 #### How many features does the file contain
 ```bash
-grep -v "^#" Poecilia_mexicana.P_mexicana-1.0.115.gff3 | wc -l
+grep -v "^#" pm.gff3 | wc -l
 ```
 ```bash
 839033
@@ -41,10 +41,19 @@ grep -v "^#" Poecilia_mexicana.P_mexicana-1.0.115.gff3 | wc -l
 
 #### How many genes are listed for this organism?
 ```bash
+cat Poecilia_mexicana.P_mexicana-1.0.115.gff3 | grep -v "^#" pm.gff3 | cu
+t -f3 | grep "^gene$" | wc -l
+```
+```bash
+24072
+```
+#### top 10annotated feature types
+```bash
 cat pm.gff3 | cut -f 3 | sort | uniq |head
 cat pm.gff3 | cut -f 3 | sort | uniq -c |head
-cat pm.gff3 | cut -f 3 | sort | uniq -c | sort -rn |head
+cat pm.gff3 | cut -f 3 | sort | uniq -c | sort -rn |head -10
 ```
+
 
 #### Output
 ```bash
