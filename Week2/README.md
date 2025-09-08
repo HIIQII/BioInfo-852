@@ -45,7 +45,7 @@ cat Poecilia_mexicana.P_mexicana-1.0.115.gff3 | grep -v "^#" pm.gff3 | cu
 t -f3 | grep "^gene$" | wc -l
 ```
 ```bash
-24072
+24074
 ```
 
 #### top 10 annotated feature types
