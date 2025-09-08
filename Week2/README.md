@@ -47,7 +47,8 @@ t -f3 | grep "^gene$" | wc -l
 ```bash
 24072
 ```
-#### top 10annotated feature types
+
+#### top 10 annotated feature types
 ```bash
 cat pm.gff3 | cut -f 3 | sort | uniq |head
 cat pm.gff3 | cut -f 3 | sort | uniq -c |head
