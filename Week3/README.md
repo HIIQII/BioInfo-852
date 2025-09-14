@@ -28,3 +28,9 @@ cat Ahsha.gff | grep -v "^#" | grep -w "gene" > Ahsha_genes.gff3
 #### 
 By playing with the original gff and simplified gff files, I found that the simplified gff file is well organized compare to the original version, There will be only 1 coding seuquence for a gene, while the original gff usually provide different sequence for the same location of the genome.
 
+#### Upload the IGV screenshot to the Repository
+```bash
+git add images/first_gene_start.png images/last_gene_stop.png images/translation_table.png
+git commit -m "Add IGV screenshots for start/stop codons and translation table"
+git push
+```
