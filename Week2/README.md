@@ -1,7 +1,7 @@
 Hi This is My Week 2 Assignment
 
 #### The Species I picked 
-poecilia_mexicana
+
 Poecilia mexicana (Atlantic molly) is a small freshwater fish in the family Poeciliidae, native to Central America. It’s closely related to the guppy and is often studied in evolutionary biology and environmental adaptation.
 
 
