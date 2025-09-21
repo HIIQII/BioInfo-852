@@ -46,6 +46,7 @@ Since there's only 1 gene encodes the Zika Virus protein, the gene is called Pol
 #### 
 ```bash 
 The polyprotein CDS covers almost the entire genome, with mature_protein_region_of_CDS features nested inside.
+This indicates that the Zika genome is extremely compact.
 
 There is no intragenic “junk” space like in human genomes.
 
