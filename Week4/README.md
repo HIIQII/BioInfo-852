@@ -43,12 +43,11 @@ cut -f 3 genomic.gff | sort | uniq -c
 Since there's only 1 gene encodes the Zika Virus protein, the gene is called Polyprotein for Zika Virus and it is to  serve as a precursor that gets processed into all functional proteins required for Zika virus structure and replication.
 ```
 
-#### 
-```bash 
-The polyprotein CDS covers almost the entire genome, with mature_protein_region_of_CDS features nested inside.
-This indicates that the Zika genome is extremely compact.
-
-There is no intragenic “junk” space like in human genomes.
-
-Only very short UTRs at the ends are non-coding.
+#### alternative genome builds
+```bash
+Accession numbers : GCF_002366285.1
 ```
+
+#### the focus of the paper and alternative questions I can answer
+```bash
+By using a different genome build, I could shift the research question from “What is the RNA structure of Zika virus?” to “How has the Zika virus genome and its structural elements evolved between African and Asian lineages, and what might this mean for viral transmission and pathogenesis?”
