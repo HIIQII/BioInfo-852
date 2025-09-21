@@ -49,3 +49,13 @@ There is no intragenic “junk” space like in human genomes.
 
 Only very short UTRs at the ends are non-coding.
 ```
+
+#### alternative genome builds
+```bash
+Accession numbers : GCF_002366285.1
+```
+
+#### the focus of the paper and alternative questions I can answer
+```bash
+By using a different genome build, I could shift the research question from “What is the RNA structure of Zika virus?” to “How has the Zika virus genome and its structural elements evolved between African and Asian lineages, and what might this mean for viral transmission and pathogenesis?”
+```
