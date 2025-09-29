@@ -75,13 +75,16 @@ fastq-dump -X 1000000 -F --outdir reads --split-files SRR3194431
 ls reads
 ```
 #### 10X genome coverage
-#### Since the size of read from the SRA is too large, in order to get a 10X coverage I think 1000000 reads would be appropriate to get a 10X coverage rate.
+#### Since the size of reads from the SRA is too large, in order to get a 10X coverage, I think 1000000 reads would be appropriate to get a 10X coverage rate.
 
 #### Quality assessment
 ```bash
 seqkit stats reads/SRR3194431_1.fastq
 fastqc reads/SRR3194431_1.fastq
 ```
+#### fastqc report
+<img width="949" height="865" alt="屏幕截图 2025-09-28 210337" src="https://github.com/user-attachments/assets/af7f4143-2883-4c6f-9b08-f620fea9e17b" />
+
 
 #### Evaluation 
 
