@@ -88,7 +88,7 @@ fastqc reads/SRR3194431_1.fastq
 
 #### Evaluation 
 
-#### The per base sequence quality and per sequence quality modules show consistently high read quality, which indicates the dataset is technically sound. However, the per base sequence content is uneven, especially at the beginning and end of reads. This is a common artifact in RNA-seq libraries caused by priming and adapter effects, and while flagged by FASTQC, it is not unexpected and should not seriously impact downstream analyses after trimming.
+##### The per base sequence quality and per sequence quality modules show consistently high read quality, which indicates the dataset is technically sound. However, the per base sequence content is uneven, especially at the beginning and end of reads. This is a common artifact in RNA-seq libraries caused by priming and adapter effects, and while flagged by FASTQC, it is not unexpected and should not seriously impact downstream analyses after trimming.
 
 #### uality Control
 ```bash
@@ -111,7 +111,7 @@ micromamba run -n menv multiqc -o ${REPORTS} ${REPORTS}
 ```
 #### Altenative SRA 
 
-#### SRR3191545 Sequenced on Illumina as well but this project use MiSeq instead of NextSeq.
+##### SRR3191545 Sequenced on Illumina as well but this project use MiSeq instead of NextSeq.
 
-#### The Illumina NextSeq 500 dataset (SRR3194431) provides very high throughput short reads (~75 bp), making it adapt for transcript quantification but less informative for assembly. By contrast, an Illumina MiSeq(SRR3191545) run of the Zika virus genome yields fewer reads but at longer lengths (150–300 bp, often paired-end), which facilitates de novo assembly and improves mapping accuracy. Both platforms generate high-quality data, but they are complementary: NextSeq excels in depth, while MiSeq excels in read length and assembly power.
+##### The Illumina NextSeq 500 dataset (SRR3194431) provides very high throughput short reads (~75 bp), making it adapt for transcript quantification but less informative for assembly. By contrast, an Illumina MiSeq(SRR3191545) run of the Zika virus genome yields fewer reads but at longer lengths (150–300 bp, often paired-end), which facilitates de novo assembly and improves mapping accuracy. Both platforms generate high-quality data, but they are complementary: NextSeq excels in depth, while MiSeq excels in read length and assembly power.
 
