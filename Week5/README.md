@@ -37,7 +37,7 @@ cut -f 3 genomic.gff | sort | uniq -c
 ```
 
 ####  What is the longest gene? What is its name and function?
-#### Since there's only 1 gene encodes the Zika Virus protein, the gene is called Polyprotein for Zika Virus and it is to  serve as a precursor that gets processed into all functional proteins required for Zika virus structure and replication.
+##### Since there's only 1 gene encodes the Zika Virus protein, the gene is called Polyprotein for Zika Virus and it serves as a precursor that gets processed into all functional proteins required for Zika virus structure and replication.
 
 
 ####
