@@ -40,12 +40,7 @@ cut -f 3 genomic.gff | sort | uniq -c
 ##### Since there's only 1 gene encodes the Zika Virus protein, the gene is called Polyprotein for Zika Virus and it serves as a precursor that gets processed into all functional proteins required for Zika virus structure and replication.
 
 
-#####
-The polyprotein CDS covers almost the entire genome, with mature_protein_region_of_CDS features nested inside.
-
-There is no intragenic “junk” space like in human genomes.
-
-Only very short UTRs at the ends are non-coding.
+#####The polyprotein CDS covers almost the entire genome, with mature_protein_region_of_CDS features nested inside. There is no intragenic “junk” space like in human genomes. Only very short UTRs at the ends are non-coding.
 
 
 #### alternative genome builds
