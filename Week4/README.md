@@ -13,7 +13,7 @@ mv GCF_000882815.3_ViralProj36615_genomic.fna Zikagenome.fa
 
 
 #### Analyze genome data 
-#### genome size / feature
+#### genome size/feature
 ```bash 
 grep -v ">" Zikagenome.fa | wc -m
 cut -f 3 genomic.gff | sort | uniq -c
