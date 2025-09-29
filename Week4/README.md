@@ -8,7 +8,8 @@ unzip -n ncbi_dataset.zip
 mv mv GCF_000882815.3_ViralProj36615_genomic.fna Zikagenome.fa
 ```
 #### Visualize genome gff gtf on IGV
-....
+<img width="1678" height="475" alt="屏幕截图 2025-09-21 143528" src="https://github.com/user-attachments/assets/7e386d9e-308a-4bf1-8985-5c700957fa1e" />
+
 
 
 #### Analyze genome data 
