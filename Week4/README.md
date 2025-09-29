@@ -29,7 +29,7 @@ cut -f 3 genomic.gff | sort | uniq -c
 #### Only very short UTRs at the ends are non-coding.
 
 
-#### alternative genome builds
+### alternative genome builds
 ```bash
 Accession numbers : GCF_002366285.1
 ```
