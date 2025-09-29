@@ -70,9 +70,9 @@ fastqc reads/SRR3194431_1.fastq
 
 #### Evaluation 
 
-##### The per base sequence quality and per sequence quality modules show consistently high read quality, which indicates the dataset is technically sound. However, the per base sequence content is uneven, especially at the beginning and end of reads. This is a common artifact in RNA-seq libraries caused by priming and adapter effects, and while flagged by FASTQC, it is not unexpected and should not seriously impact downstream analyses after trimming.
+##### The per-base sequence quality and per-sequence quality modules show consistently high read quality, which indicates the dataset is technically sound. However, the per-base sequence content is uneven, especially at the beginning and end of reads. This is a common artifact in RNA-seq libraries caused by priming and adapter effects, and while flagged by FASTQC, it is not unexpected and should not seriously impact downstream analyses after trimming.
 
-#### uality Control
+#### Quality Control
 ```bash
 set -uex
 SRR=SRR3194431
