@@ -114,5 +114,3 @@ micromamba run -n menv multiqc -o ${REPORTS} ${REPORTS}
 
 #### The Illumina NextSeq 500 dataset (SRR3194431) provides very high throughput short reads (~75 bp), making it adapt for transcript quantification but less informative for assembly. By contrast, an Illumina MiSeq(SRR3191545) run of the Zika virus genome yields fewer reads but at longer lengths (150–300 bp, often paired-end), which facilitates de novo assembly and improves mapping accuracy. Both platforms generate high-quality data, but they are complementary: NextSeq excels in depth, while MiSeq excels in read length and assembly power.
 
-
-1
