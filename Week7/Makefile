@@ -35,6 +35,16 @@ all: index align stats
 $(GENOME):
 	mkdir -p $(DATA)
 	curl -L $(GENOME_URL) | gunzip -c > $(GENOME)
+	
+# ------------------------------------------------------------
+# 1b. Download the Zika genome annotation (GFF3)
+# ------------------------------------------------------------
+GFF_URL = https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/882/815/GCF_000882815.3_ViralProj36615/GCF_000882815.3_ViralProj36615_genomic.gff.gz
+GFF = $(DATA)/Zikagenome.gff
+
+$(GFF):
+	mkdir -p $(DATA)
+	curl -L $(GFF_URL) | gunzip -c > $(GFF)
 
 # ------------------------------------------------------------
 # 2. Download SRA reads (⚠️ NOTE: this step can be very slow)
