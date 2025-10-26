@@ -22,7 +22,7 @@ INDEX_PREFIX = $(DATA)/ZikaIndex
 # Default target: run all samples in parallel from design.csv
 # ------------------------------------------------------------
 all: $(GENOME) $(GFF) index
-	@echo "🚀 Running all samples from design.csv using GNU Parallel..."
+	@echo "Running all samples from design.csv using GNU Parallel..."
 	cat design.csv | tail -n +2 | parallel -j 4 --colsep ',' \
 		'make sample SRR={2} NAME={1} LAYOUT={3}'
 
@@ -47,7 +47,7 @@ index: $(GENOME)
 # Per-sample workflow
 # ------------------------------------------------------------
 sample:
-	@echo "🧬 Processing $(NAME) ($(SRR))..."
+	@echo "Processing $(NAME) ($(SRR))..."
 	mkdir -p $(DATA)
 
 	# Step 1: Download reads
@@ -72,16 +72,16 @@ sample:
 # Step 4: Convert BAM → BigWig (safe + make-compatible)
 	@( \
 		if [ -s $(DATA)/$(NAME)_$(SRR).sorted.bam ]; then \
-			echo "🧮 Generating coverage track for $(NAME)_$(SRR)..."; \
+			echo "Generating coverage track for $(NAME)_$(SRR)..."; \
 			LC_ALL=C bedtools genomecov -ibam $(DATA)/$(NAME)_$(SRR).sorted.bam -split -bg 2>/dev/null | \
 				sort -k1,1 -k2,2n > $(DATA)/$(NAME)_$(SRR).bedgraph || true; \
 			if [ -s $(DATA)/$(NAME)_$(SRR).bedgraph ]; then \
 				bedGraphToBigWig $(DATA)/$(NAME)_$(SRR).bedgraph $(GENOME).fai $(DATA)/$(NAME)_$(SRR).bw || true; \
 			else \
-				echo "⚠️ No coverage data for $(NAME)_$(SRR), skipping BigWig conversion."; \
+				echo "No coverage data for $(NAME)_$(SRR), skipping BigWig conversion."; \
 			fi; \
 		else \
-			echo "⚠️ Empty BAM file for $(NAME)_$(SRR), skipping coverage generation."; \
+			echo "Empty BAM file for $(NAME)_$(SRR), skipping coverage generation."; \
 		fi \
 	) || true
 
@@ -89,14 +89,14 @@ sample:
 # Convert all BedGraph files to BigWig (manual regeneration)
 # ------------------------------------------------------------
 bigwig: $(GENOME).fai
-	@echo "🎨 Converting all BedGraph files to BigWig..."
+	@echo "Converting all BedGraph files to BigWig..."
 	@for f in $(DATA)/*.bedgraph; do \
 		base=$$(basename $$f .bedgraph); \
 		if [ -s "$$f" ]; then \
-			echo "🔄 $$base.bedgraph → $$base.bw"; \
+			echo "$$base.bedgraph → $$base.bw"; \
 			bedGraphToBigWig "$$f" $(GENOME).fai "$(DATA)/$$base.bw" || echo "⚠️ Failed on $$base"; \
 		else \
-			echo "⚠️ Skipping empty $$f"; \
+			echo "Skipping empty $$f"; \
 		fi; \
 	done
 
