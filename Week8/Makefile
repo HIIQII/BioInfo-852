@@ -10,7 +10,6 @@
 SHELL := /bin/bash
 .IGNORE:  # Prevent harmless non-zero exits (like empty coverage) from halting make
 
-
 THREADS = 4
 DATA = data
 GENOME_URL = https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/882/815/GCF_000882815.3_ViralProj36615/GCF_000882815.3_ViralProj36615_genomic.fna.gz
