@@ -1,16 +1,5 @@
-Week 9 Assignment
+Week 8 Assignment
 Yue Shi
-
-## Problem in the last assignment
-The code does not use GNU parallel
-There is no readme.md
-There is no use of the design.csv file
-
-Appologize for that, there's something wrong when i push my files to repository and it just lost all the files that i upload to the github.
-
-## Assignment 9
-Used Parallel command to analyze all the SRA and alignment parellely
-
 
 ## The SRR sample I get frmo the NCBI only have 8 experiments
 
@@ -20,8 +9,6 @@ Get all the SRR sample from the BioProj
 # Get metadata for a BioProject
 bio search PPRJNA313294 -H --csv > metadata.csv
 ```
-## Althernative pathway to download SRA name and SRA number
-I had trouble to download the SRA using the previous code, so i directly download the SraRunTable(also attached in the assignment) and convert align the number and names using the code below.
 
 ## Convert the metadate.csv into design.csv
 ```bash
@@ -59,4 +46,3 @@ make all
 
 ---
 
-## Summary
