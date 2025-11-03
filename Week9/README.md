@@ -2,28 +2,31 @@ Week 9 Assignment
 Yue Shi
 
 ## Problem in the last assignment
+
 The code does not use GNU parallel
+
 There is no readme.md
+
 There is no use of the design.csv file
 
-Appologize for that, there's something wrong when i push my files to repository and it just lost all the files that i upload to the github.
 
 ## Assignment 9
-Used Parallel command to analyze all the SRA and alignment parellely
+Added the Parallel command to analyze all the SRA and alignment in parallel.
 
 
-## The SRR sample I get frmo the NCBI only have 8 experiments
+## The SRR sample I get from the NCBI only has 8 experiments
 
-## 
+
 Get all the SRR sample from the BioProj
 ```bash
 # Get metadata for a BioProject
 bio search PPRJNA313294 -H --csv > metadata.csv
 ```
-## Althernative pathway to download SRA name and SRA number
-I had trouble to download the SRA using the previous code, so i directly download the SraRunTable(also attached in the assignment) and convert align the number and names using the code below.
 
-## Convert the metadate.csv into design.csv
+## Althernative pathway to download SRR name and SRR number
+I had trouble downloading the SRR using the provided code because of the site issue, so I directly downloaded the SraRunTable(also attached in the assignment) and converted and aligned the numbers and names using the code below.
+
+## Convert the SraRunTable.csv into design.csv
 ```bash
 awk -F'\t' '
 BEGIN { print "sample,srr,layout" }
@@ -35,28 +38,49 @@ NR>1 { print $2","$1","$18 }
 make all
 ```
 
-## Makefile Work Flow
+## Parellel Command
+```bash
+cat design.csv | tail -n +2 | parallel -j 4 --colsep ',' \
+		'make sample SRR={2} NAME={1} LAYOUT={3}'
+```
+## Run a Single SRR Sample
+```bash
+make sample SRR=SRR3191542 NAME=RNA-Seq LAYOUT=SINGLE
+```
 
+## Makefile Workflow Overview
 
-1. **Get genome and GFF files**  
+1. **Get genome and annotation files**  
    Downloads the Zika reference genome (`.fa`) and gene annotation (`.gff`) from NCBI.
 
 2. **Index the genome**  
-   Builds the BWA index files required for alignment (only needs to run once).
+   Creates the BWA index and `.fai` genome index for alignment and coverage calculation.
 
-3. **Read design.csv**  
-   Reads the list of SRR accessions and sample names to process in parallel using GNU Parallel.
+3. **Read sample list**  
+   Reads `design.csv` to iterate through all SRR samples using GNU Parallel.
 
 4. **For each sample:**  
-   - **Download reads:** Retrieves FASTQ files from SRA using `fastq-dump` (subset of 100,000 reads).  
-   - **Align reads:** Runs `bwa mem` to align reads to the genome, generating sorted BAM files.  
-   - **Index BAM:** Uses `samtools index` for IGV visualization.  
-   - **Generate stats:** Summarizes alignment quality with `samtools flagstat` and `samtools coverage`.  
-   - **Create coverage tracks:** Converts BAM files to `.bedgraph` and `.bw` for genome browser viewing.
+   - **Download reads:** Retrieves up to 100,000 reads from SRA using `fastq-dump`.  
+   - **Align reads:** Uses `bwa mem` to align reads to the indexed genome and produces a sorted BAM file.  
+   - **Sort & index BAM:** Sorts and indexes BAM files with `samtools sort` and `samtools index`.  
+   - **Generate statistics:** Produces alignment summaries with `samtools flagstat` and `samtools coverage`.  
+   - **Convert to coverage tracks:**  
+     Converts BAM → BedGraph → BigWig for genome browser visualization.  
+     If no coverage is detected, it prints:  
+     ```
+     No coverage data found for <sample_name>; skipping BigWig conversion.
+     ```
 
-5. **Clean up**  
-   `make clean` removes all generated data and resets the workspace.
+5. **Manual BigWig regeneration**  
+   If `.bw` files are missing or `.fai` was added later, rerun:
+   ```bash
+   make bigwig
+6. ** Clean Up**
+   ```bash
+   make clean
+   ```
 
 ---
 
 ## Summary
+Throughout the alignment, I have met some readings have 0% coverage which really interesting. I didnt expect that would happen, when I look back to the NCBI SRR, There are some sequence that are mock experiments which could potentially explain about the problem.
