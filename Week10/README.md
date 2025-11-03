@@ -46,7 +46,7 @@ make all SRR=SRR3194430 SAMPLE=Zika_SRR3194430 LAYOUT=SINGLE
 make all SRR=SRR3194431 SAMPLE=Zika_SRR3194431 LAYOUT=SINGLE
 ```
 
-This will create .bam vcf.gz and coverage data.
+This will create .bam, vcf.gz, and coverage data.
 
 ### Step 2 Merge all the VCF files
 ```bash
