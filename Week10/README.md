@@ -36,7 +36,7 @@ For each SRR sample, the pipeline:
 
 ## Commands to Run
 
-### Step 1  Generate BAM and VCF for each sample with coverage
+### Step 1:  Generate BAM and VCF for each sample with coverage
 Only three samples produced usable alignment coverage:  
 SRR3191544, SRR3194430, and SRR3194431.
 
@@ -48,8 +48,18 @@ make all SRR=SRR3194431 SAMPLE=Zika_SRR3194431 LAYOUT=SINGLE
 
 This will create .bam, vcf.gz, and coverage data.
 
-### Step 2 Merge all the VCF files
+### Step 2: Merge all the VCF files
 ```bash
 make merge_vcf
 ```
 
+### Step 3: Visualize in IGV
+1. bam alignment and VCF for 1 sample 
+<img width="1701" height="920" alt="Highest Coverage Sample" src="https://github.com/user-attachments/assets/a2cd6533-07b8-4e7b-be67-b4f68f56c6b7" />
+2. VCF for 3 samples that have coverage
+<img width="1705" height="471" alt="VCF" src="https://github.com/user-attachments/assets/95475bcf-a8c0-4f58-8da4-f88a716b2bae" />
+
+### Step 4: Clean Up
+```bash
+make clean
+```
