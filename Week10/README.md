@@ -37,8 +37,8 @@ For each SRR sample, the pipeline:
 ## Commands to Run
 
 ### Step 1:  Generate BAM and VCF for each sample with coverage
-Only three samples produced usable alignment coverage:  
-SRR3191544, SRR3194430, and SRR3194431.
+3 Examples to generate bam files and vcf files. 
+SRR3191544, SRR3194430, and SRR3194431
 
 ```bash
 make all SRR=SRR3191544 SAMPLE=Zika_SRR3191544 LAYOUT=SINGLE
