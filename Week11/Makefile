@@ -1,6 +1,6 @@
 #
 # Zika Virus Variant Calling Workflow
-# Yue Shi – Week 10
+# Yue Shi – Week 11
 #
 
 # ------------------------------------------------------------
@@ -58,6 +58,7 @@ usage:
 	@echo "# make vcf          # Call SNPs and produce VCF file"
 	@echo "# make variants_all # Call variants for all samples (from design.csv)"
 	@echo "# make merge_vcf    # Merge all per-sample VCFs"
+	@echo "# make vep          # Analyze variants with Ensembl VEP"
 	@echo "# make all          # Run everything end-to-end"
 	@echo "# make clean        # Remove all generated data"
 	@echo "#"
@@ -76,7 +77,7 @@ $(REF):
 $(GFF):
 	mkdir -p $(DATA)
 	curl -L $(GFF_URL) | gunzip -c > $(GFF)
-
+	
 # ------------------------------------------------------------
 # BAM generation
 # ------------------------------------------------------------
@@ -140,15 +141,37 @@ merge_vcf:
 	@echo "# Multisample VCF created: data/multisample.vcf.gz"
 
 # ------------------------------------------------------------
+# VEP annotation
+# ------------------------------------------------------------
+${GFF}.gz: 
+	# Sort and compress the GFF file
+	cat ${GFF} | sort -k1,1 -k4,4n -k5,5n -t$$'\t' | bgzip -c > ${GFF}.gz
+	# Index the GFF file
+	tabix -p gff ${GFF}.gz
+
+vep: ${GFF}.gz
+	mkdir -p results
+	micromamba run -n vep \
+		~/src/ensembl-vep/vep \
+		-i ${VCF} \
+		-o results/vep.txt \
+		-gff ${GFF}.gz \
+		-fasta ${REF} \
+		--force_overwrite
+
+	# Show the resulting files
+	ls -lh results/*
+
+# ------------------------------------------------------------
 # Run all steps
 # ------------------------------------------------------------
-all: bam vcf
+all: bam vcf vep
 
 # ------------------------------------------------------------
 # Cleanup
 # ------------------------------------------------------------
 clean:
-	rm -rf $(DATA)
+	rm -rf $(DATA) results
 	@echo "# Workspace cleaned."
 
-.PHONY: usage bam vcf all clean variants_all merge_vcf
+.PHONY: usage bam vcf all clean variants_all merge_vcf vep
