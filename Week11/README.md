@@ -62,10 +62,10 @@ SRR3194430
 <img width="1683" height="444" alt="image" src="https://github.com/user-attachments/assets/1c4c6c04-7bc7-4578-9160-f33995afcf33" />
 
 ## Summary
-#Some interesting variants I found:
-#Position	Codon (ref→alt)  Nucleotide change*	  Amino-acid change	 Mutation type	    Likely effect (brief)
-#8,289	   GTG → GTC	     G → C (3rd base)	  Val → Val (V→V)	    Synonymous (SNP)	 Likely neutral (no AA change)
-#10,331   CTT → CCT	     T → C (1st base)	  Leu → Pro (L→P)	    Missense (SNP)	 Possibly disruptive; Pro can kink/break helices
-#6,352	   AGT → AGC	     T → C (3rd base)	  Ser → Ser (S→S)	    Synonymous (SNP)	 Likely neutral (no AA change)
-#6,340	   TTT → TGT	     T → G (2nd base)	  Phe → Cys (F→C)	    Missense (SNP)	 Potentially impactful; introduces cysteine (possible disulfide/thiol effects)
+# Some interesting variants I found:
+# Position	Codon (ref→alt)  Nucleotide change*	  Amino-acid change	 Mutation type	    Likely effect (brief)
+# 8,289	   GTG → GTC	     G → C (3rd base)	  Val → Val (V→V)	    Synonymous (SNP)	 Likely neutral (no AA change)
+# 10,331   CTT → CCT	     T → C (1st base)	  Leu → Pro (L→P)	    Missense (SNP)	 Possibly disruptive; Pro can kink/break helices
+# 6,352	   AGT → AGC	     T → C (3rd base)	  Ser → Ser (S→S)	    Synonymous (SNP)	 Likely neutral (no AA change)
+# 6,340	   TTT → TGT	     T → G (2nd base)	  Phe → Cys (F→C)	    Missense (SNP)	 Potentially impactful; introduces cysteine (possible disulfide/thiol effects)
 
