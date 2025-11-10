@@ -73,4 +73,3 @@ Position	Codon (ref→alt)  Nucleotide change*	  Amino-acid change	 Mutation typ
 6,352	   AGT → AGC	     T → C (3rd base)	  Ser → Ser (S→S)	    Synonymous (SNP)	 Likely neutral (no AA change)
 
 6,340	   TTT → TGT	     T → G (2nd base)	  Phe → Cys (F→C)	    Missense (SNP)	 Potentially impactful; introduces cysteine (possible disulfide/thiol effects)
-
