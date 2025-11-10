@@ -51,8 +51,10 @@ Analyze Effect of Variants
 ## VEP
 SRR3191544
 <img width="820" height="319" alt="image" src="https://github.com/user-attachments/assets/57312d5e-acf4-4788-8923-80e06dda1aaa" />
+
 SRR3194431
 <img width="812" height="316" alt="image" src="https://github.com/user-attachments/assets/07d609bf-1470-4adb-bae9-ef9bb67f058c" />
+
 SRR3194430
 <img width="818" height="299" alt="image" src="https://github.com/user-attachments/assets/8838cc1e-6800-4875-8c80-589c90f6cdf3" />
 
@@ -60,5 +62,10 @@ SRR3194430
 <img width="1683" height="444" alt="image" src="https://github.com/user-attachments/assets/1c4c6c04-7bc7-4578-9160-f33995afcf33" />
 
 ## Summary
-Through out this assignment, I find 
+Some interesting variants I found:
+Position	Codon (ref→alt)  Nucleotide change*	  Amino-acid change	 Mutation type	    Likely effect (brief)
+8,289	   GTG → GTC	     G → C (3rd base)	  Val → Val (V→V)	    Synonymous (SNP)	 Likely neutral (no AA change)
+10,331   CTT → CCT	     T → C (1st base)	  Leu → Pro (L→P)	    Missense (SNP)	 Possibly disruptive; Pro can kink/break helices
+6,352	   AGT → AGC	     T → C (3rd base)	  Ser → Ser (S→S)	    Synonymous (SNP)	 Likely neutral (no AA change)
+6,340	   TTT → TGT	     T → G (2nd base)	  Phe → Cys (F→C)	    Missense (SNP)	 Potentially impactful; introduces cysteine (possible disulfide/thiol effects)
 
