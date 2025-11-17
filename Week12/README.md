@@ -4,8 +4,15 @@ Yue Shi
 ---
 
 ## Overview
-This project evaluates how different sequencing platforms perform when aligned to the human genome.  
+This project assesses the performance of various sequencing platforms when aligned to the human genome.  
 A small genomic region—the **KRAS locus** (chr12:25,205,246–25,250,936)—is extracted from three platforms for comparison.
+
+## Command
+```bash
+make illumina
+make ont
+make aviti
+```
 
 Workflow steps:  
 1. Download reference genome  
