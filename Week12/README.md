@@ -78,22 +78,22 @@ The three technologies provide complementary strengths.
 
 ## Visualization in IGV
 
-Reference genome:
+illumina
 ```
-refs/GRCh38_GIABv3.fasta
+<img width="1915" height="1069" alt="illumina" src="https://github.com/user-attachments/assets/617e63f3-fb2b-435c-8503-35ca43ce3a18" />
+
 ```
 
-Regional BAM files:
+Nanopore oxford
 ```
-bam/Illumina_region.bam
-bam/Aviti_region.bam
-bam/ONT_region.bam
+<img width="1701" height="1057" alt="ont" src="https://github.com/user-attachments/assets/7f09f969-06d0-4a52-998c-3c370d53d6de" />
+
 ```
 
-Navigate to:
+aviti
 ```
-chr12:25205246-25250936
+<img width="1919" height="1071" alt="aviti" src="https://github.com/user-attachments/assets/6fc88e37-8833-45cf-aacd-f3eb038d933d" />
+
 ```
 
----
 
