@@ -66,7 +66,9 @@ Aviti delivers clean, PCR-free short-read alignments with almost no duplicates a
 ---
 
 ### Oxford Nanopore ONT
-ONT produces long reads capable of spanning full introns and complex regions, making it powerful for structural variants and phasing. Its coverage in the KRAS window is sparse and indel error rates are higher, resulting in less detailed local alignment compared to short-read platforms.
+
+ONT produces long reads capable of spanning full introns and complex regions, making it powerful for structural variants and phasing. Its coverage in the KRAS window is sparse, and indel error rates are higher, resulting in less detailed local alignment than on short-read platforms.
+
 ---
 
 ## Interpretation
