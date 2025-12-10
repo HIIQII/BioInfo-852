@@ -1,4 +1,4 @@
-## Week 13 – RNA-Seq Read Alignment and Gene Count Matrix (UHR–HBR chr22)
+## Week 13 – RNA-Seq Read Alignment and Gene Count Matrix
 Yue Shi
 
 ---
