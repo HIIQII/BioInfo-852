@@ -37,8 +37,6 @@ make align
 ```bash
 make counts
 ```
-<img width="443" height="362" alt="a2cd6064fb9ae9a715f6594e1437d57" src="https://github.com/user-attachments/assets/aa47f0a7-9d4c-482a-8bac-ca245f45112d" />
-<img width="353" height="432" alt="83d367016fe9bd1e4a2a575be4a31c6" src="https://github.com/user-attachments/assets/1787e985-fb3b-4d15-9fe2-d254cedb3c41" />
 
 ## Discussion
 By pulling out the first 50 lines of the count matrix, they mainly contain genes with zero counts in all samples, which is expected because RNA-seq reads were aligned only to chromosome 22, and many chr22 genes simply do not receive reads in the UHR–HBR subset.
