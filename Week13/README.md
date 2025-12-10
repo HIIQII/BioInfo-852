@@ -41,7 +41,9 @@ make counts
 <img width="353" height="432" alt="83d367016fe9bd1e4a2a575be4a31c6" src="https://github.com/user-attachments/assets/1787e985-fb3b-4d15-9fe2-d254cedb3c41" />
 
 ## Discussion
-
+By pulling out the first 50 lines of the count matrix, they mainly contain genes with zero counts in all samples, which is expected because RNA-seq reads were aligned only to chromosome 22, and many chr22 genes simply do not receive reads in the UHR–HBR subset.
+However, several genes in this region show clear expression differences between the UHR and HBR samples. These lines illustrate how the count matrix reflects real biological variation that can be validated in IGV.
+Inspection of the first several lines of the count matrix shows that most chr22 genes have zero counts across all samples, which is expected for this reduced dataset. However, several genes display clear and consistent expression differences between UHR and HBR. For example, ENSG00000280341.1 shows counts of 3 and 2 in UHR samples but zero in all HBR samples, while ENSG00000279442.1 is expressed only in UHR_2 and UHR_3. In IGV, these genes show small but distinct exon-aligned peaks in UHR tracks and flat coverage in HBR tracks, confirming that the observed numerical differences accurately reflect the underlying read alignments. Genes such as ENSG00000272872.1, which shows high UHR coverage and very low HBR coverage, further illustrate consistent expression patterns that match both the count matrix and the visual RNA-seq signal.
 
 ## Visualize in IGV
 ## HBR-1
@@ -57,3 +59,5 @@ make counts
 ## UHR-3
 <img width="1897" height="564" alt="image" src="https://github.com/user-attachments/assets/87abe4ac-c1b2-4b39-85ce-ff0574225cfa" />
 
+## 
+Visualization demonstrates it is RNA-Seq Data because only at the exon region it have high covery rate.
