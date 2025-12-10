@@ -4,8 +4,15 @@ Yue Shi
 ---
 
 ## Overview
-This project evaluates how different sequencing platforms perform when aligned to the human genome.  
+This project assesses the performance of various sequencing platforms when aligned to the human genome.  
 A small genomic region—the **KRAS locus** (chr12:25,205,246–25,250,936)—is extracted from three platforms for comparison.
+
+## Command
+```bash
+make illumina
+make ont
+make aviti
+```
 
 Workflow steps:  
 1. Download reference genome  
@@ -59,7 +66,9 @@ Aviti delivers clean, PCR-free short-read alignments with almost no duplicates a
 ---
 
 ### Oxford Nanopore ONT
-ONT produces long reads capable of spanning full introns and complex regions, making it powerful for structural variants and phasing. Its coverage in the KRAS window is sparse and indel error rates are higher, resulting in less detailed local alignment compared to short-read platforms.
+
+ONT produces long reads capable of spanning full introns and complex regions, making it powerful for structural variants and phasing. Its coverage in the KRAS window is sparse, and indel error rates are higher, resulting in less detailed local alignment than on short-read platforms.
+
 ---
 
 ## Interpretation
@@ -71,22 +80,22 @@ The three technologies provide complementary strengths.
 
 ## Visualization in IGV
 
-Reference genome:
-```
-refs/GRCh38_GIABv3.fasta
-```
+illumina
 
-Regional BAM files:
-```
-bam/Illumina_region.bam
-bam/Aviti_region.bam
-bam/ONT_region.bam
-```
+<img width="1915" height="1069" alt="illumina" src="https://github.com/user-attachments/assets/617e63f3-fb2b-435c-8503-35ca43ce3a18" />
 
-Navigate to:
-```
-chr12:25205246-25250936
-```
 
----
+
+Nanopore oxford
+
+<img width="1701" height="1057" alt="ont" src="https://github.com/user-attachments/assets/7f09f969-06d0-4a52-998c-3c370d53d6de" />
+
+
+
+aviti
+
+<img width="1919" height="1071" alt="aviti" src="https://github.com/user-attachments/assets/6fc88e37-8833-45cf-aacd-f3eb038d933d" />
+
+
+
 
