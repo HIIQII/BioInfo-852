@@ -41,7 +41,7 @@ make counts
 ## Continue the work from last week we will analyze the differential expression of RNA seq data.
 
 ## Convert to Stats environment
-```bash
+```bash 
 conda activate stats
 ```
 
@@ -63,13 +63,13 @@ src/r/plot_pca.r -c edger.csv -d design.csv -o pca.pdf
 ```
 <img width="988" height="271" alt="image" src="https://github.com/user-attachments/assets/425f2366-b591-44bb-a5e0-7e042fe08414" />
 
-## PCA interpretation: Principal component analysis (PCA) shows clear separation between HBR and UHR samples. PC1 explains 97% of the total variance and distinctly separates the two conditions, indicating that biological differences between HBR and UHR dominate the expression signal.Replicates within each group cluster tightly together, while PC2 explains only 1% of the variance,suggesting low technical variation and good reproducibility among samples.
- Overall, the PCA confirms strong condition-specific transcriptional differences in the RNA-Seq data.
+PCA interpretation: Principal component analysis (PCA) shows clear separation between HBR and UHR samples. PC1 explains 97% of the total variance and distinctly separates the two conditions, indicating that biological differences between HBR and UHR dominate the expression signal. Replicates within each group cluster tightly together, while PC2 explains only 1% of the variance,suggesting low technical variation and good reproducibility among samples. Overall, the PCA confirms strong condition-specific transcriptional differences in the RNA-Seq data.
 
 ## Heat Map
 ```bash
 src/r/plot_heatmap.r -c edger.csv
 ```
 <img width="861" height="827" alt="image" src="https://github.com/user-attachments/assets/23187594-a345-4b4e-bc6b-8ad8a20d27b1" />
+
 
 
