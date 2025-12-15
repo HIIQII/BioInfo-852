@@ -71,5 +71,18 @@ src/r/plot_heatmap.r -c edger.csv
 ```
 <img width="861" height="827" alt="image" src="https://github.com/user-attachments/assets/23187594-a345-4b4e-bc6b-8ad8a20d27b1" />
 
+The heatmap shows clear separation of samples by biological condition.
+HBR samples cluster together and display highly similar expression patterns,
+while UHR samples form a distinct cluster with opposing expression profiles.
+Large blocks of genes show inverse regulation between the two groups,
+with genes highly expressed in UHR appearing low in HBR, and vice versa.
+This indicates strong, coordinated transcriptional differences rather than
+random variation.
 
+
+## Functional Enrichment
+```bash
+bio gprofiler -c edger.csv -d hsapiens
+bio enrichr -c edger.csv
+```
 
